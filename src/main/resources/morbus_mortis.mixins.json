@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "ruby.matty.morbus_mortis.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "morbus_mortis.refmap.json",
+  "mixins": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
