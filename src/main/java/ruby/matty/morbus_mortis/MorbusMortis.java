@@ -16,4 +16,4 @@ public class MorbusMortis {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         MorbusMortisItems.register(bus);
     }
-} // this is a test
+}
