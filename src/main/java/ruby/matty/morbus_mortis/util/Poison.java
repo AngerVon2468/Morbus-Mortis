@@ -11,7 +11,8 @@ public enum Poison {
 	CELIAC_DISEASE,
 	ASTHMA,
 	DIABETES,
-	ADHD;
+	ADHD,
+	CANCER;
 
 	@Override
 	public String toString() {

@@ -4,12 +4,13 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerPlayer;
 
-import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.*;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 import ruby.matty.morbus_mortis.MorbusMortis;
+import ruby.matty.morbus_mortis.command.PoisonCommand;
 import ruby.matty.morbus_mortis.util.Poison;
 
 import java.util.*;
@@ -80,6 +81,7 @@ public class MorbusMortisEvents {
 				case ASTHMA -> handleAsthma(player);
 				case DIABETES -> handleDiabetes(player);
 				case ADHD -> handleAdhd(player);
+				case CANCER -> handleCancer(player);
 			}
 		}
 	}
@@ -90,5 +92,12 @@ public class MorbusMortisEvents {
 
 	public static void handleAdhd(ServerPlayer player) {}
 
+	public static void handleCancer(ServerPlayer player) {}
+
 	public static void nothing() {}
+
+	@SubscribeEvent
+	public static void commandRegistryEvent(RegisterCommandsEvent event) {
+		new PoisonCommand(event.getDispatcher());
+	}
 }
