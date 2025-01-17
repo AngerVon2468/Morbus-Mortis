@@ -11,6 +11,8 @@ public class MorbusMortisItems {
 
 	private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MorbusMortis.MOD_ID);
 
+	public static final RegistryObject<Item> LISDEXAMFETAMINE_DIMSYLATE = ITEMS.register("lisdexamfetamine_dimsylate", () -> new Item(new Item.Properties()));
+
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);
 	}
